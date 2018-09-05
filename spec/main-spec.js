@@ -1,11 +1,12 @@
-const main = require('../main/main');
+const printInventory = require('../main/main');
+const database = require('../main/datbase');
 
 describe('pos', function () {
     var allItems;
     var inputs;
 
     beforeEach(function () {
-        allItems = loadAllItems();
+        allItems = database.loadAllItems();
         inputs = [
             'ITEM000001',
             'ITEM000001',
